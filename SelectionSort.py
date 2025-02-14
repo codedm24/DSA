@@ -21,8 +21,10 @@ if code_run == 1:
 elif code_run == 2:
     
     for i in range(n-1):
+        #print(f"i:{i}:{array1[i]}")
         min_index = i
         for j in range(i+1,n):
+            #print(f"j:{j}:{array1[j]}")
             if(array1[j] < array1[min_index]):
                 min_index = j
         array1[i], array1[min_index] = array1[min_index], array1[i]
