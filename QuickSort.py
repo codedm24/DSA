@@ -11,6 +11,7 @@ def partition(array, low, high):
             array[i], array[j] = array[j], array[i]
 
     array[i+1], array[high] = array[high], array[i+1]
+    print(f"array: {array}")
     return i + 1
 
 def quicksort(array, low=0, high=None):
@@ -19,10 +20,11 @@ def quicksort(array, low=0, high=None):
 
     if low < high:
         pivot_index = partition(array, low, high)
+        print(f"pivot_index: {pivot_index}")
         print(f"Sorting left part of pivot")
         quicksort(array, low, pivot_index - 1)
         print(f"Sorting right part of pivot")
-        quicksort(array, pivot_index+1, high)
+        quicksort(array, pivot_index + 1, high)
 
 array1 = [64,34,25,12,22,11,90,5]
 quicksort(array1)
