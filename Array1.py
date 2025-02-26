@@ -6,3 +6,8 @@ for item in array1:
         min_val = item
 
 print(f"Min val: {min_val}")
+
+#code check
+gen = (i for i in range(10))
+print(list(gen))
+print(list(gen))
